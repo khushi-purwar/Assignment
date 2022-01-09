@@ -22,7 +22,7 @@ async function startServer(){
       res.send("First server on graphql")
    })
 
-   await mongoose.connect('mongodb+srv://Khushi14:khushi14@instacluser.wjyzl.mongodb.net/graphqlDemo?retryWrites=true&w=majority',{
+   await mongoose.connect(process.env.MONGO_URI,{
        useUnifiedTopology: true,
        useNewUrlParser: true
    });
